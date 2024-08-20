@@ -6,6 +6,7 @@ import Avatar from "../../../../assets/images/avatar.png"
 import theme from '../../../../theme';
 import StyledButton from '../../../../components/Styled-Button/StyledButton';
 import { AnimatedBackground } from '../../../../components/Animated-Background/AnimatedBackground';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 
 const Hero = () => {
@@ -29,6 +30,11 @@ const Hero = () => {
         border: `1px solid ${theme.palette.primary.contrastText}`
     }))
 
+    const [typeEffect] = useTypewriter({
+        words: ['Front-End Developer'],
+        typeSpeed: 100
+    })
+
     return (
         <>
             <StyledHero>
@@ -46,7 +52,7 @@ const Hero = () => {
                         </Grid>
                         <Grid item xs={12} md={7}>
                             <Typography color="primary.contrastText" variant='h1' textAlign="center"pb={2} >Erik Anderson</Typography>
-                            <Typography color="primary.contrastText" variant='h2' textAlign="center">I'm a Front-End Developer</Typography>
+                            <Typography color="primary.contrastText" variant='h2' textAlign="center">I'm a {typeEffect}</Typography>
                             <Grid container display="flex" justifyContent="center" spacing={1} pt={3}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center" >
                                     <StyledButton onClick={()=> console.log("download")}>
