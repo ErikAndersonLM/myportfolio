@@ -15,6 +15,7 @@ const Hero = () => {
         backgroundColor: theme.palette.primary.main,
         height: "100vh",
         display: "flex",
+        overflow: "hidden",
         alignItems: "center",
         [theme.breakpoints.up('xs')]: { // <= mobile
             paddingTop: "100px"
@@ -51,11 +52,11 @@ const Hero = () => {
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={7}>
-                            <Typography color="primary.contrastText" variant='h1' textAlign="center"pb={2} >Erik Anderson</Typography>
+                            <Typography color="primary.contrastText" variant='h1' textAlign="center" pb={2} >Erik Anderson</Typography>
                             <Typography color="primary.contrastText" variant='h2' textAlign="center">I'm a {typeEffect}</Typography>
                             <Grid container display="flex" justifyContent="center" spacing={1} pt={3}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center" >
-                                    <StyledButton onClick={()=> console.log("download")}>
+                                    <StyledButton onClick={() => console.log("download")}>
                                         <CloudDownloadIcon />
                                         <Typography>
                                             Download CV
@@ -63,7 +64,7 @@ const Hero = () => {
                                     </StyledButton>
                                 </Grid>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <StyledButton  onClick={()=> console.log("email")}>
+                                    <StyledButton onClick={() => console.log("email")}>
                                         <EmailIcon />
                                         <Typography>
                                             Contact Me
@@ -71,8 +72,6 @@ const Hero = () => {
                                     </StyledButton>
                                 </Grid>
                             </Grid>
-
-
                         </Grid>
                     </Grid>
                 </Container>
