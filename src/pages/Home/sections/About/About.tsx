@@ -11,6 +11,24 @@ const About = () => {
         marginTop: "16px"
     }))
 
+    const StyledSkills = styled("div")(({ theme }) => ({
+        [theme.breakpoints.up('xs')]: { // <= mobile
+            height: "100%",
+            width: "60%"
+        },
+        [theme.breakpoints.up('md')]: { // >= mobile
+            height: "60px",
+            width: "130px"
+        },
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        border: "2px solid #D3D3D3",
+        borderRadius: "5px",
+        padding: '8px'
+    }))
+
     const StyledAboutText = styled("div")(({ theme }) => ({
         marginTop: "2%",
         borderBottom: "2px solid #D3D3D3",
@@ -82,6 +100,99 @@ const About = () => {
                                 </Typography>
                             </StyledAboutText>
                         </Grid>
+
+                        <Grid item xs={12} md={12} display="flex" justifyContent="center">
+                            <Typography variant='h2' fontWeight="10">Skills</Typography>
+                        </Grid>
+
+                        <Grid container spacing={2} mt={2} display="flex" justifyContent="center" alignItems="center">
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    Javascript
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    CSS
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    Next JS
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    Angular
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    Git
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    React
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    Vite
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    Typescript
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    Material Ui
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    Angular Material
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    Figma
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        <Grid item xs={12} md={2} display="flex" justifyContent="center">
+                            <StyledSkills>
+                                <Typography textAlign="center">
+                                    HMTL
+                                </Typography>
+                            </StyledSkills>
+                        </Grid>
+                        </Grid>
+
+
                     </Grid>
                 </Container>
             </StyledAbout>
