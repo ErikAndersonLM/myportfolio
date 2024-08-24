@@ -7,6 +7,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Padding } from '@mui/icons-material';
+import Avatar from "../../../../assets/images/avatar.png"
 
 const Projects = () => {
 
@@ -53,7 +54,7 @@ const Projects = () => {
                                         <CardMedia
                                             component="img"
                                             height="400"
-                                            image="src\assets\images\Avatar.png"
+                                            image={Avatar}
                                             alt="green iguana"
                                         />
                                         <CardContent>
@@ -105,7 +106,7 @@ const Projects = () => {
                                         <CardMedia
                                             component="img"
                                             height="400"
-                                            image="src\assets\images\Avatar.png"
+                                            image={Avatar}
                                             alt="green iguana"
                                         />
                                         <CardContent sx={{ paddingLeft: "0" }}>
