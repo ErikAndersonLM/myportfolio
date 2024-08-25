@@ -1,4 +1,4 @@
-import { styled, Grid, Container, Typography, Box, CardActionArea } from '@mui/material'
+import { styled, Grid, Container, Typography, Box, CardActionArea, Link } from '@mui/material'
 import StyledButton from '../../../../components/Styled-Button/StyledButton';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import CodeIcon from '@mui/icons-material/Code';
@@ -8,6 +8,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Padding } from '@mui/icons-material';
 import Avatar from "../../../../assets/images/avatar.png"
+import Vimmpag from "../../../../assets/images/vimmpag.png"
+import LocalSeguros from "../../../../assets/images/localseguro.png"
 
 const Projects = () => {
 
@@ -16,16 +18,24 @@ const Projects = () => {
         minHeight: "100vh",
         display: "flex",
         paddingBottom: "20px"
-
     }))
 
-    const StyledProjectsCard = styled("div")(({ theme }) => ({
-        border: "1px solid #D3D3D3",
-        width: "100%",
-        padding: "8px",
-        borderRadius: "5px",
-        height: "500px"
+    const StyledProjectsCard = styled(Card)(({ theme }) => ({
+        backgroundColor: 'transparent',
+        boxShadow: 'none',
+        border: '1px solid #D3D3D3',
+        borderRadius: "8px",
+        display: "flex",
+        flexDirection: "column",
+        height: "100%", // Garantir que o Card ocupe todo o espaço disponível
     }))
+
+    const StyledCardActionArea = styled(CardActionArea)({
+        flex: 1, // Permite que o conteúdo do card cresça para ocupar todo o espaço disponível
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between' // Espaça o conteúdo de forma uniforme
+    })
 
     return (
         <>
@@ -37,108 +47,81 @@ const Projects = () => {
                         </Grid>
 
                         <Grid item xs={12} md={6}>
-                            <Card sx={{
-                                backgroundColor: 'transparent',
-                                boxShadow: 'none',
-                                border: '1px solid #D3D3D3',
-                                borderRadius: "8px"
-                            }}>
-                                <Box p={2}>
-                                    <CardActionArea>
+                            <StyledProjectsCard>
+                                <StyledCardActionArea>
+                                    <Box p={2}>
                                         <Typography gutterBottom variant="h5" component="div" bgcolor={'transparent'} mb={0} color="primary.contrastText">
-                                            Project Exemple
+                                            Local Seguros
                                         </Typography>
                                         <Typography variant="body2" mb={2} color="primary.contrastText">
-                                            July 2024 ~ August 2024
+                                            July 2023 ~ November 2023
                                         </Typography>
                                         <CardMedia
                                             component="img"
                                             height="400"
-                                            image={Avatar}
+                                            image={LocalSeguros}
                                             alt="green iguana"
                                         />
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="div" color="primary.contrastText">
-                                                Lizard
+                                                Local Seguros
                                             </Typography>
                                             <Typography variant="body2" color="primary.contrastText">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                species, ranging across all continents except Antarctica
+                                            Com mais de 15 anos de experiência no ramo de Seguros foi empreender também na cidade de Jundiaí, onde trouxe um novo conceito em atendimento altamente personalizado e sob medida para empresas e pessoas da região.
                                             </Typography>
                                         </CardContent>
-                                        <Grid container display="flex" justifyContent="start" spacing={1} pt={3}>
-                                            <Grid item xs={12} md={6} display="flex" justifyContent="center" >
-                                                <StyledButton onClick={() => console.log("see project")}>
-                                                    <VisibilityIcon />
-                                                    <Typography>
-                                                        View Project
-                                                    </Typography>
-                                                </StyledButton>
-                                            </Grid>
-                                            <Grid item xs={12} md={6} display="flex" justifyContent="center">
-                                                <StyledButton onClick={() => console.log("show code")}>
-                                                    <CodeIcon />
-                                                    <Typography>
-                                                        Show Code
-                                                    </Typography>
-                                                </StyledButton>
-                                            </Grid>
-                                        </Grid>
-                                    </CardActionArea>
-                                </Box>
-                            </Card>
+                                    </Box>
+                                    <Grid container display="flex" justifyContent="center" spacing={1} pt={3} px={2} pb={2}> {/* Adicionado px={2} e pb={2} */}
+                                        <Link href="https://vimmpag.com.br/" target="_blank" width="100%">
+                                            <StyledButton onClick={() => console.log("see project")}>
+                                                <VisibilityIcon />
+                                                <Typography>
+                                                    View Project
+                                                </Typography>
+                                            </StyledButton>
+                                        </Link>
+                                    </Grid>
+                                </StyledCardActionArea>
+                            </StyledProjectsCard>
                         </Grid>
+
                         <Grid item xs={12} md={6}>
-                            <Card sx={{
-                                backgroundColor: 'transparent',
-                                boxShadow: 'none',
-                                border: '1px solid #D3D3D3',
-                                borderRadius: "8px"
-                            }}>
-                                <Box p={2}>
-                                    <CardActionArea>
+                            <StyledProjectsCard>
+                                <StyledCardActionArea>
+                                    <Box p={2}>
                                         <Typography gutterBottom variant="h5" component="div" bgcolor={'transparent'} mb={0} color="primary.contrastText">
-                                            Project Exemple
+                                            VimmPag
                                         </Typography>
                                         <Typography variant="body2" mb={2} color="primary.contrastText">
-                                            July 2024 ~ August 2024
+                                            January 2022 ~ August 2023
                                         </Typography>
                                         <CardMedia
                                             component="img"
                                             height="400"
-                                            image={Avatar}
-                                            alt="green iguana"
+                                            image={Vimmpag}
+                                            alt="Site da  VimmPag"
                                         />
                                         <CardContent sx={{ paddingLeft: "0" }}>
                                             <Typography gutterBottom variant="h5" component="div" color="primary.contrastText">
-                                                Lizard
+                                                VimmPag
                                             </Typography>
                                             <Typography variant="body2" color="primary.contrastText">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                species, ranging across all continents except Antarctica
+                                                No mercado desde 2019, a VIMM Pag é uma Fintech de serviços de gestão de pagamentos que desenvolve soluções tecnológicas abrangendo o ecossistema completo desde a originação de recebíveis até a captação de recursos no mercado de capitais.
                                             </Typography>
                                         </CardContent>
-                                        <Grid container display="flex" justifyContent="start" spacing={1} pt={3}>
-                                            <Grid item xs={12} md={6} display="flex" justifyContent="center" >
-                                                <StyledButton onClick={() => console.log("see project")}>
-                                                    <VisibilityIcon />
-                                                    <Typography>
-                                                        View Project
-                                                    </Typography>
-                                                </StyledButton>
-                                            </Grid>
-                                            <Grid item xs={12} md={6} display="flex" justifyContent="center">
-                                                <StyledButton onClick={() => console.log("show code")}>
-                                                    <CodeIcon />
-                                                    <Typography>
-                                                        Show Code
-                                                    </Typography>
-                                                </StyledButton>
-                                            </Grid>
-                                        </Grid>
-                                    </CardActionArea>
-                                </Box>
-                            </Card>
+                                    </Box>
+                                    <Grid container display="flex" justifyContent="center" spacing={1} pt={3} px={2} pb={2}> {/* Adicionado px={2} e pb={2} */}
+                                        <Link href="https://vimmpag.com.br/" target="_blank" width="100%">
+                                            <StyledButton onClick={() => console.log("see project")}>
+                                                <VisibilityIcon />
+                                                <Typography>
+                                                    View Project
+                                                </Typography>
+                                            </StyledButton>
+                                        </Link>
+                                    </Grid>
+                                </StyledCardActionArea>
+                            </StyledProjectsCard>
                         </Grid>
                     </Grid>
                 </Container>
@@ -147,4 +130,4 @@ const Projects = () => {
     )
 }
 
-export default Projects
+export default Projects;
