@@ -72,7 +72,7 @@ const Projects = () => {
                                         </CardContent>
                                     </Box>
                                     <Grid container display="flex" justifyContent="center" spacing={1} pt={3} px={2} pb={2}> {/* Adicionado px={2} e pb={2} */}
-                                        <Link href="https://vimmpag.com.br/" target="_blank" width="100%">
+                                        <Link href="https://localseguro-dev.revvivare.com/login" target="_blank" width="100%">
                                             <StyledButton onClick={() => console.log("see project")}>
                                                 <VisibilityIcon />
                                                 <Typography>
