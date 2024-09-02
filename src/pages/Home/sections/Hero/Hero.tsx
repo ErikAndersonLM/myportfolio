@@ -7,6 +7,8 @@ import theme from '../../../../theme';
 import StyledButton from '../../../../components/Styled-Button/StyledButton';
 import { AnimatedBackground } from '../../../../components/Animated-Background/AnimatedBackground';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import Profile from '../../../../assets/documents/Profile.pdf'
+import { Link } from 'react-scroll';
 
 
 const Hero = () => {
@@ -56,12 +58,18 @@ const Hero = () => {
                             <Typography color="primary.contrastText" variant='h2' textAlign="center">I'm a {typeEffect}</Typography>
                             <Grid container display="flex" justifyContent="center" spacing={1} pt={3}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center" >
+                                    <Box sx={{
+                                        width: "100%"
+                                    }}>
+                                    <a href={Profile} download='Profile.pdf'>
                                     <StyledButton onClick={() => console.log("download")}>
                                         <CloudDownloadIcon />
                                         <Typography>
                                             Download CV
                                         </Typography>
                                     </StyledButton>
+                                    </a>
+                                    </Box>
                                 </Grid>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
                                     <StyledButton onClick={() => console.log("email")}>
